@@ -1,0 +1,74 @@
+.FormSection{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SuperAppHeadingDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+.EmailGoogleSignup{
+    font-size: 1.5rem;
+}
+.EmailSignup::after{
+    content: "|";
+    margin: 0rem 1rem;
+    color: #72DB73;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.InputFields{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+}
+.InputFields > input{
+    background: #292929;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.3rem;
+    border: none;
+    margin: 0.5rem 0rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: white    ;
+}
+.ConsentCheck{
+    color: #7C7C7C;
+    margin-top: 1rem;
+}
+.CheckBoxTick{
+    margin-right: 1rem;
+}
+.SignUpButton{
+    width: 90%;
+    color: white;
+    font-size: 1.5rem;
+    padding: .4rem 0rem;
+    border-radius: 30px;
+    background: #72DB73;
+    margin-top: 2rem;
+    border: none;
+}
+.TandCText{
+    margin-top: 0.4rem;
+    width: 90%;
+    font-size: 0.75rem;
+    color:#7C7C7C;
+}
+.errorMessage{
+    color: red;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,28 @@
+.ImageSection{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("./Discover.png");
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+}
+.HaveAnAccount{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+.LoginButton{
+    color: white;
+    background: #72DB73;
+    border-radius: 33px;
+    padding: 0px 2.3rem;
+    height: 3em;
+    border: none;
+}
+.DiscoverHeading{
+    font-weight: 900;
+    font-size: 2.4rem;
+    width: 80%;
+}
