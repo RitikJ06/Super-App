@@ -2,6 +2,7 @@ import React from 'react'
 import './FormSection.css'
 import HeadingImg from './Super_App_Heading.svg'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function FormSection() {
   let [formValues, setFormValues] = useState({
@@ -20,6 +21,8 @@ export default function FormSection() {
   const [mobileError, setMobileError] = useState("");
   const [consentCheckError, SetConsentCheckError] = useState("");
 
+  const navigate = useNavigate();
+
   const handleInput = (event) => {
     newFormValues = {...formValues, [event.target.name]: event.target.value}
     setFormValues(newFormValues);
@@ -28,7 +31,6 @@ export default function FormSection() {
       validateName();
     }
     else if(event.target.name == "username"){
-      console.log(formValues);
       validateUserName();
     }
     else if(event.target.name == "email"){
@@ -40,7 +42,6 @@ export default function FormSection() {
     else if(event.target.name == "consent"){
       validateConsent();
     }
-    console.log(event.target.name);
   };
 
   const [consentCheck, setConcentCheck] = useState(false);
@@ -103,7 +104,6 @@ export default function FormSection() {
   }
 
   const validateAndShowErrors = () => {
-    
     let nameValid = validateName();
     let usernameValid = validateUserName();
     let emailValid = validateEmail();
@@ -118,6 +118,7 @@ export default function FormSection() {
       localStorage.setItem("email", newFormValues.email);
       localStorage.setItem("mobile", newFormValues.mobile);
       localStorage.setItem("consent", newFormValues.consent);
+      navigate('/choose-category');
     }
   }
 

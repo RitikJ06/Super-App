@@ -1,0 +1,30 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #1E1E1E;
+    color: white;
+    
+  }
+  
+  #root{
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+  }
+  
+  a{
+    color: #72DB73;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+  }
+  
+  /* Firefox */
+  input[type="number"] {
+     -moz-appearance: textfield;
+  }
