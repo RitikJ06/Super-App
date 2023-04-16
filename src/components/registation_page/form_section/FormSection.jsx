@@ -1,6 +1,6 @@
 import React from 'react'
 import './FormSection.css'
-import HeadingImg from './Super_App_Heading.svg'
+import HeadingImg from '../../images/Super_App_Heading.svg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -24,7 +24,10 @@ export default function FormSection() {
   const navigate = useNavigate();
 
   const handleInput = (event) => {
-    newFormValues = {...formValues, [event.target.name]: event.target.value}
+    // temporary variable is created to overcome the asyc behaviour of useState
+    event.target.name == "consent" ?
+    newFormValues = {...formValues, [event.target.name]: event.target.checked}:
+      newFormValues = {...formValues, [event.target.name]: event.target.value}
     setFormValues(newFormValues);
     
     if(event.target.name == "name"){
@@ -44,8 +47,6 @@ export default function FormSection() {
     }
   };
 
-  const [consentCheck, setConcentCheck] = useState(false);
-  
   const validateName = () =>{
     if(!newFormValues.name.trim()){
       setNameError("Please enter a valid name");
@@ -58,7 +59,6 @@ export default function FormSection() {
   }
   
   const validateUserName = () => {
-    // console.log(formValues.username.trim());
     if(!newFormValues.username.trim()){
       setUserNameError("Please enter a valid username");
       return false;
@@ -101,6 +101,7 @@ export default function FormSection() {
       SetConsentCheckError("");
       return true;
     }
+
   }
 
   const validateAndShowErrors = () => {
@@ -109,15 +110,9 @@ export default function FormSection() {
     let emailValid = validateEmail();
     let mobileValid = validateMobile();
     let consentValid = validateConsent();
-    console.log(nameValid, usernameValid, emailValid, mobileValid, consentValid)
     if(nameValid && usernameValid && emailValid && mobileValid && consentValid){
       // store data in local storage
-      console.log("Checking!!!");  
-      localStorage.setItem("name", newFormValues.name);
-      localStorage.setItem("username", newFormValues.username);
-      localStorage.setItem("email", newFormValues.email);
-      localStorage.setItem("mobile", newFormValues.mobile);
-      localStorage.setItem("consent", newFormValues.consent);
+      localStorage.setItem("userData", JSON.stringify(newFormValues));
       navigate('/choose-category');
     }
   }
@@ -168,7 +163,7 @@ export default function FormSection() {
           <div className='errorMessage'>{mobileError}</div>
           <div>
             <div className='ConsentCheck'>
-              <input className='CheckBoxTick' name='consent' type='checkbox' defaultChecked={consentCheck} onChange={handleInput}/>
+              <input className='CheckBoxTick' name='consent' type='checkbox' defaultChecked={false} onChange={handleInput}/>
               Share my registration data with Superapp
             </div>
           </div>

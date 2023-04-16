@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Register from './components/registation_page/Register';
 import ChooseCategory from './components/choose_category/ChooseCategory';
+import Profile from './components/profile/Profile';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path='/' element={<Register/>}/>
         <Route path='/choose-category' element={<ChooseCategory/>}/>
+        <Route path='/profile' element={<Profile/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,0 +1,112 @@
+.RegisterSection{
+    display: flex;
+    flex-direction: column;
+}
+.chooseCategory{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    padding-top: 10vh;
+}
+.categoryHeadingSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+}
+.categoryHeadingSectionWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-top: 1em;
+    height: 100%;
+
+}
+.entertainmentCategoryHeading{
+    font-size: 3.2rem;
+    margin: 0.4em 0em;
+}
+.supperAppImg{
+    width: 60%;
+}
+
+.categoryCardsSection{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+
+}
+.categorCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26%;
+    height: 29%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 12px;
+
+}
+.cardHeading{
+    align-self: flex-start;
+    margin: 0.3rem 0px;
+    font-weight: 500;
+}
+.cardImage{
+    width: 80%;
+    margin: 0.6rem 0rem;
+}
+.SeletedCategories{
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-y: scroll; */
+}
+.categoryItem{
+    background: #148A08;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 38%;
+    margin: 0.6rem;
+    z-index: 10;
+}
+.categoryName{
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+}
+.crossSign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  0.8rem;
+    cursor: pointer;
+    color: #085C00;
+}
+
+.nextPageSection{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20%;
+}
+.nextPageBtn{
+    background: #148A08;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-weight: 500;
+    border-radius: 40px;
+    margin-right: 7.3rem ;
+}
+.errorMsg{
+    color: red;
+    margin-right: 40px;
+}
