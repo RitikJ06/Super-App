@@ -1,0 +1,30 @@
+.homeSection{
+    width: 100%;
+    display: flex;
+    padding: 4% 6%;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.leftSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.profileWrapper{
+    height: 60%;
+    display: flex;
+}
+
+.weatherWrapper{
+    display: flex;
+    height: 35%;
+}
+
+.rightSection{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+}

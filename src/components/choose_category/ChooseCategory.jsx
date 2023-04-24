@@ -28,10 +28,9 @@ export default function ChooseCategory() {
 
   function saveAndNextPage(){
     if(categoryList.length >= 3){
-        console.log("saving")
         // save the date to local storage
         localStorage.setItem("categoriesList", JSON.stringify(categoryList));
-        navigate('/profile');
+        navigate('/home');
     }
     else{
         setErrorMsg("Select atleast 3 categories to continue!");

@@ -1,0 +1,53 @@
+.weatherCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+}
+.dateTimeSection{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    background:#FF4ADE;
+    font-size: 2.2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-weight: 600;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.weatherSection{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0px 0px 30px 30px;
+    background:#101744;
+}
+
+.weatherStatusWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.temperature{
+    font-size: 2.4rem;
+}
+
+.iconValue{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconValue img{
+    margin-right: 15px;
+}
+.windHumidity{
+    display: flex;
+    flex-direction: column;
+}
