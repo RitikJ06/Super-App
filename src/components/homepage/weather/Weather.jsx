@@ -50,7 +50,7 @@ export default function Weather() {
                 <img src={currentWeatherImage} style={{width:"50%", margin:"0.2rem"}}/>
                 <span>{currentWeather}</span>
             </div>
-            <img src={lineImg}/>
+            <img src={lineImg} style={{height:"40%"}}/>
 
             <div className={styles.weatherStatusWrapper}>
                 <span className={styles.temperature}>{temperature + "°C"}</span>
@@ -59,7 +59,7 @@ export default function Weather() {
                     <p>{pressure + " mbar"}<br/>Pressure</p>
                 </div>
             </div>
-            <img src={lineImg}/>
+            <img src={lineImg} style={{height:"40%"}}/>
 
             <div className={styles.weatherStatusWrapper}>
                 <div className={styles.iconValue}>

@@ -23,7 +23,7 @@ export default function Profile() {
         </div>  
         <div className={styles.selectedCategories}>
           {categoriesList.map((category) => 
-              (<div  className={styles.categoryItem}>{category}</div>)
+              (<div key={category} className={styles.categoryItem}>{category}</div>)
           )}
         </div>
       </div>

@@ -2,7 +2,7 @@
     width: 100%;
     background: #5746EA;
     border-radius: 33px;
-    padding: 8% 5%;
+    padding: 4% 3%;
     justify-content: space-evenly;
     display: flex;
     align-items: flex-start;
@@ -24,13 +24,13 @@
 }
 
 .NameEmail{
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 400;
     margin: 0.2rem 0rem;
 }
 .userName{
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 1.3rem;
     margin: 0.6rem 0rem;
 }
 
@@ -40,14 +40,13 @@
 }
 .categoryItem{
     background: #9F94FF;
-    font-size: 1.3rem;
+    font-size: .8rem;
     font-weight: 300;
     width: 30%;
-    padding: 0.5rem 1.3rem;
+    padding: 0.2rem 0.7rem;
     border-radius: 50px;
     margin: 0.3rem;
 }
 .profileImg{
     height: 100%;
-    
 }

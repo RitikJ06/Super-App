@@ -13,6 +13,32 @@
     width: 60%;
 }
 
+.upperSection{
+    display: flex;
+    justify-content: space-between;
+    height: 65%;
+}
+
+.upperLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 52%;
+}
+
+.upperRight{
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+}
+
+.lowerSection{
+    display: flex;
+    justify-content: center;
+    height: 32%;
+    width: 100%;
+}
+
 .profileWrapper{
     height: 60%;
     display: flex;

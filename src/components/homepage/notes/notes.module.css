@@ -1,0 +1,40 @@
+.notesWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 19px;
+    background: #F1C75B;
+    padding: 0px 8%;
+    box-sizing: border-box;
+}
+
+.notesHeading{
+    color: black;
+}
+
+.notesTextArea{
+    background: #F1C75B;
+    border: none;
+    height: 80%;
+    font-size: 1rem;
+    overflow: auto;
+    outline: none;
+}
+.notesIcon{
+    width: 80px;
+    height: 80px;
+    background: url("./images/pencilBg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    border-radius: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-self: flex-end;
+    left: 1rem;
+    bottom: 1rem;
+}

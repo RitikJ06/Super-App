@@ -1,0 +1,49 @@
+.timerSection{
+    width: 100%;
+    height: 100%;
+    background: #1E2343;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputStartSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 35%;
+}
+
+.timerInputWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.timerInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timerInputLabel{
+    font-weight: 400;
+    color: #949494;
+}
+
+.timerInputField{
+    width: 50px;
+    font-size: 40px;
+    background: #1E2343;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 300;
+}
+
+.timerInputField::-webkit-outer-spin-button,
+.timerInputField::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
