@@ -1,7 +1,8 @@
 .homeSection{
     width: 100%;
     display: flex;
-    padding: 4% 6%;
+    flex-direction: column;
+    padding: 4% 6% 2% 6%;
     box-sizing: border-box;
     justify-content: space-between;
 }
@@ -53,4 +54,23 @@
     width: 34%;
     display: flex;
     flex-direction: column;
+}
+
+.topSection{
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomSection{
+    display: flex;
+    height: 6%;
+    justify-content: flex-end;
+}
+
+.browseButton{
+    background: #148A08;
+    border-radius: 34px;
+    border: none;
+    width: 10%;
 }

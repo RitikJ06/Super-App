@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Register from './components/registation_page/Register';
 import ChooseCategory from './components/choose_category/ChooseCategory';
 import Home from './components/homepage/Home';
+import Entertainment from './components/entertainment/Entertainment';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -16,6 +17,7 @@ root.render(
         <Route path='/' element={<Register/>}/>
         <Route path='/choose-category' element={<ChooseCategory/>}/>
         <Route path='/home' element={<Home/>}/>
+        <Route path='/entertainment' element={<Entertainment/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

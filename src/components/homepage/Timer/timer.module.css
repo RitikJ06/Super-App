@@ -4,20 +4,22 @@
     background: #1E2343;
     border-radius: 19px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .inputStartSection{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-between;
+    height: 90%;
     width: 35%;
 }
 
 .timerInputWrapper{
     display: flex;
     width: 100%;
+    height: 70%;
     justify-content: space-between;
 }
 
@@ -25,6 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 25%;
 }
 
 .timerInputLabel{
@@ -33,7 +36,7 @@
 }
 
 .timerInputField{
-    width: 50px;
+    margin: 0px;
     font-size: 40px;
     background: #1E2343;
     border: none;
@@ -42,8 +45,37 @@
     font-weight: 300;
 }
 
-.timerInputField::-webkit-outer-spin-button,
-.timerInputField::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.timerStartButton{
+    background: #FF6A6A;
+    border-radius: 20px;
+    border: none;
+    height: 15%;
+    color: white;
+    font-size: 1rem;
+}
+
+.upArrow{
+    width: 30%;
+    margin: 15px 0px 10px 0px;
+}
+.downArrow{
+    width: 30%;
+    margin: 15px 0px 10px 0px;
+}
+.timerWrapper{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/progressBG.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.circularProgressBar {
+    display: flex;
+    height: 90%;
+    box-sizing: border-box;
+    padding: 10px;
 }
