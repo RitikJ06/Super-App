@@ -14,7 +14,6 @@ export default function Entertainment() {
   
   let genres = JSON.parse(localStorage.getItem("categoriesList")).slice(0, 3);
   useEffect( () => {
-        // const url = 'https://moviesdatabase.p.rapidapi.com/titles/search/keyword/%7Bkeyword%7D';
         const options = {
             method: 'GET',
             headers: {
@@ -25,7 +24,6 @@ export default function Entertainment() {
         };
         const fetchMoviesData = async (genre, setter) => {
             const url = 'https://api.themoviedb.org/3/discover/movie?api_key=294c0d94fd6a0914ca06dd639c14c4fd&language=en-US&sort_by=popularity.desc&include_video=false&page=1&with_genres=' + genre;
-            console.log(genre);
             try {
                 const response = await fetch(url);
                 const data = await response.json();
@@ -33,8 +31,6 @@ export default function Entertainment() {
                 for(let i=0; i<4; i++){
                     bglist.push('https://image.tmdb.org/t/p/original/' + data['results'][i]['backdrop_path'])
                 }
-                // imgURLs.push(bglist);
-                console.log(bglist);
                 setter(bglist);
             } catch (error) {
                 console.error(error);
