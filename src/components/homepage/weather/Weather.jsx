@@ -19,7 +19,7 @@ export default function Weather() {
   let weatherData;
 
   useEffect(() => {
-    const url = "http://api.weatherapi.com/v1/current.json?key=8746d01e829c4cdd98c24105232004&q=Jaipur";
+    const url = "https://api.weatherapi.com/v1/current.json?key=8746d01e829c4cdd98c24105232004&q=Jaipur";
 
     const fetchData = async () => {
       try {

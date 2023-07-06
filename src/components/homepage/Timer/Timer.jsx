@@ -35,7 +35,6 @@ export default function () {
   }
 
   const playTimer = () => {
-        console.log(totalSecs, totalUpdatedCurrentSecs);
         if(totalUpdatedCurrentSecs == 0){
             clearInterval(interval);
             return;
@@ -55,8 +54,6 @@ export default function () {
         totalSecs = secs + minutes * 60 + hours * 3600;
         totalUpdatedCurrentSecs = totalSecs;
         setTotalCurrentSecs(totalSecs);
-        // console.log(currentHours, currentMinutes, currentSecs);
-        // interval = setInterval(playTimer, 1000);
         setCurrentInterval(setInterval(playTimer, 1000));
         timerBtnText.current = "Stop";
     }

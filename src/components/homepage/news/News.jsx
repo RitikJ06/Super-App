@@ -4,10 +4,8 @@ import newsImg from './newsBg.png';
 
 import { useEffect, useState } from 'react';
 
-// 1257754e20cd47c3a8dd6a9990608cf0
-
 export default function News() {
-  let [imgSrc, setImgSrc] = useState('./newsBg.png');
+  let [imgSrc, setImgSrc] = useState(newsImg);
   let [newsTitle, setNewsTitle] = useState('');
   let [newsDate, setNewsDate] = useState('');
   let [newsTime, setNewsTime] = useState('');
@@ -18,7 +16,6 @@ export default function News() {
 
   useEffect(() => {
     const url = "https://newsapi.org/v2/everything?apiKey=1257754e20cd47c3a8dd6a9990608cf0&language=en&q=travel";
-
 
     const fetchData = async () => {
       try {
