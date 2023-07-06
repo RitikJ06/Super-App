@@ -14,16 +14,8 @@ export default function Entertainment() {
   
   let genres = JSON.parse(localStorage.getItem("categoriesList")).slice(0, 3);
   useEffect( () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/octet-stream',
-                'X-RapidAPI-Key': 'd50e1f51famsh2fe2db3a688c33cp187c89jsnff71bd7de425',
-                'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
-            }
-        };
         const fetchMoviesData = async (genre, setter) => {
-            const url = 'https://api.themoviedb.org/3/discover/movie?api_key=294c0d94fd6a0914ca06dd639c14c4fd&language=en-US&sort_by=popularity.desc&include_video=false&page=1&with_genres=' + genre;
+            const url = 'https://api.themoviedb.org/3/search/movie?api_key=294c0d94fd6a0914ca06dd639c14c4fd&query=' + genre
             try {
                 const response = await fetch(url);
                 const data = await response.json();

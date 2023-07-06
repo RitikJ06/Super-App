@@ -12,21 +12,24 @@ export default function News() {
   let [newsDesc, setNewsDesc] = useState('');
 
   let newsData;
-  let randomArticle = Math.floor(Math.random() * 100);
 
   useEffect(() => {
-    const url = "https://newsapi.org/v2/everything?apiKey=1257754e20cd47c3a8dd6a9990608cf0&language=en&q=travel";
 
+    const url = "https://newsdata.io/api/1/news?apikey=pub_258071481b256e5463801d15ede042987e186&q=pegasus&language=en"
+    
     const fetchData = async () => {
       try {
+        const random = Math.floor(Math.random() * 5) + 1
         const response = await fetch(url);
         newsData = await response.json();
-        setNewsTitle(newsData['articles'][randomArticle]['title']);
-        let pubDate = new Date(newsData['articles'][randomArticle]['publishedAt']);
+        newsData = newsData['results'][random]
+
+        setNewsTitle(newsData['title']);
+        let pubDate = new Date(newsData['pubDate']);
         setNewsDate(pubDate.toLocaleDateString().replaceAll('/','-'));
         setNewsTime(pubDate.toLocaleTimeString('en-US', { hour: '2-digit', minute:'2-digit', hour12: true }))
-        setImgSrc(newsData['articles'][randomArticle]['urlToImage']);
-        setNewsDesc(newsData['articles'][randomArticle]['description'])
+        setImgSrc(newsData['image_url']);
+        setNewsDesc(newsData['description'])
       } catch (error) {
         console.log("error ", error);
       }
