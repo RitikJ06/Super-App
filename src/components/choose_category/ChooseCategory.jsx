@@ -27,7 +27,7 @@ function CategoryCard(props) {
 
 export default function ChooseCategory() {
   const categoryData = [
-    { color: "#FF5209", heading: "Action", img: "/images/1.png" },
+    { color: "#FF5209", heading: "Action", img: "./images/1.png" },
     { color: "#D7A4FF", heading: "Drama", img: "./images/2.png" },
     { color: "#148A08", heading: "Romance", img: "./images/3.png" },
     { color: "#84C2FF", heading: "Thriller", img: "./images/4.png" },
@@ -93,7 +93,7 @@ export default function ChooseCategory() {
                 key={category.heading}
                 color={category.color}
                 heading={category.heading}
-                imgPath={category.img}
+                imgPath={require("" + category.img)}
                 categoryList={categoryList}
                 setCategoryList={setCategoryList}
               />
