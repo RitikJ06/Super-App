@@ -14,9 +14,25 @@ export default function Weather() {
   let [pressure, setPressure] = useState('');
   let [wind, setWind] = useState('');
   let [humidity, sethumidity] = useState('');
+  let [city, setCity] = useState('Jaipur');
 
   let today = new Date();
   let weatherData;
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      console.log("Geolocation not supported");
+    }
+
+    const success = (position) => {
+      console.log(position)
+    }
+    const error = () => {
+      console.log("not able to fetch")
+    }
+  }, [])
 
   useEffect(() => {
     const url = process.env.REACT_APP_WEATHER_API;
